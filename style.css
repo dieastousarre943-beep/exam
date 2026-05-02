@@ -1,0 +1,130 @@
+:root {
+    --A: #D97706;
+    --B: #7C2D12; 
+    --C: #FBB7ED; 
+    --D: #FFF7ED; 
+    --E: #1C1917; 
+}
+/* Le corp de la page */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: var(--D);
+    color: var(--E);
+    margin: 0;
+}
+
+/* Header & Nav */
+.B { background-color: var(--B); color: white; padding: 40px; text-align: center; }
+.D { background-color: white; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.D ul { list-style: none; display: flex; justify-content: center; padding: 0; }
+.D li { margin: 0 15px; }
+.D a { text-decoration: none; color: var(--E); font-weight: bold; }
+
+/* Bannière Hero */
+.E { background-color: #FDE68A; padding: 80px 20px; text-align: center; }
+.H, .I { display: inline-block; padding: 15px 30px; margin: 10px; border-radius: 50px; text-decoration: none; font-weight: bold; }
+.H { background-color: var(--A); color: white; }
+.I { background-color: white; color: var(--B); border: 1px solid var(--B); }
+
+/* Section Restaurant (Image + Texte) */
+.J { padding: 60px 10%; }
+.K { 
+    display: flex; 
+    align-items: center; 
+    gap: 40px; 
+    background: white; 
+    padding: 30px; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+/* l image et le texte */
+.L { flex: 1; }
+.N { flex: 1; text-align: left; }
+
+.M {
+    background-color: #ccc;
+    height: 350px; /* Grande hauteur pour la photo du resto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.N h3 { color: var(--B); font-size: 2rem; margin-bottom: 20px; }
+.N p { line-height: 1.6; margin-bottom: 15px; }
+
+.O { color: var(--A); font-weight: bold; text-decoration: none; border-bottom: 2px solid var(--A); }
+
+/* Footer */
+.P { background-color: var(--B); color: white; text-align: center; padding: 40px; }
+.phone { font-size: 1.2rem; font-weight: bold; color: var(--C); margin: 10px 0; }
+
+/* Responsive : sur téléphone, l'image passe au dessus du texte */
+@media (max-width: 430px) {
+    .K { flex-direction: column; }
+    .D ul { flex-direction: column; gap: 10px; }
+    .D li { margin: 0; }
+    @media (max-width: 820px) {
+    .K { flex-direction: column; }
+    .D ul { flex-direction: column; gap: 10px; }
+    .D li { margin: 0; }
+ /* Style pour la page Menu */
+.titre-menu {
+    color: var(--B);
+    margin: 40px 0;
+    font-size: 2.5rem;
+}
+
+.grille-menu {
+    display: grid;
+    /* 4 colonnes sur ordinateur, 2 sur tablette, 1 sur mobile */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    padding: 0 5% 60px 5%;
+}
+
+.carte {
+    background-color: #FFFFFF; /* Fond de carte blanc */
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.carte:hover {
+    transform: translateY(-5px); /* Petit effet au survol */
+}
+
+.img-plat {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.carte h4 { color: var(--B); margin: 10px 0; }
+
+.carte p { 
+    color: #78716C; /* Texte secondaire */
+    font-size: 0.9rem;
+    height: 50px; /* Aligne les textes */
+}
+
+.prix {
+    display: block;
+    color: var(--A);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+/* Responsive pour le menu */
+@media (max-width: 1024px) {
+    .grille-menu { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .grille-menu { grid-template-columns: 1fr; }
+}
