@@ -43,7 +43,7 @@ body {
 
 .M {
     background-color: #ccc;
-    height: 350px; /* Grande hauteur pour la photo du resto */
+    height: 350px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,7 +85,7 @@ body {
 }
 
 .carte {
-    background-color: #FFFFFF; /* Fond de carte blanc */
+    background-color: #FFFFFF; 
     border-radius: 15px;
     padding: 15px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -93,7 +93,7 @@ body {
 }
 
 .carte:hover {
-    transform: translateY(-5px); /* Petit effet au survol */
+    transform: translateY(-5px); 
 }
 
 .img-plat {
@@ -107,9 +107,9 @@ body {
 .carte h4 { color: var(--B); margin: 10px 0; }
 
 .carte p { 
-    color: #78716C; /* Texte secondaire */
+    color: #78716C; 
     font-size: 0.9rem;
-    height: 50px; /* Aligne les textes */
+    height: 50px; 
 }
 
 .prix {
@@ -147,7 +147,7 @@ body {
 }
 
 .ABC-texte h2 {
-    color: var(--couleur-secondaire); /* Marron #7C2D12 */
+    color: var(--couleur-secondaire); 
     margin-bottom: 20px;
     font-size: 2rem;
 }
@@ -158,7 +158,7 @@ body {
 
 .img-simple {
     width: 100%;
-    border-radius: 5px; /* Pas d'ombre ici */
+    border-radius: 5px; 
     border: 2px solid var(--couleur-secondaire);
 }
 
@@ -166,7 +166,7 @@ body {
     text-align: center;
     background-color: white;
     padding: 40px;
-    border-top: 4px solid var(--couleur-principale); /* Orange #D97706 */
+    border-top: 4px solid var(--couleur-principale); 
 }
 
 .ABC-grille-simple {
@@ -193,5 +193,137 @@ body {
     }
     .ABC-grille-simple {
         flex-direction: column;
+    }
+/* STYLE GALERIE */
+
+.ABC-main {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.titre-galerie {
+    color: var(--couleur-secondaire);
+    margin-bottom: 40px;
+    font-size: 2rem;
+}
+
+.ABC-grille {
+    display: grid;
+    /* 4 colonnes sur ordinateur */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.ABC-cadre {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #E5E7EB; /* Bordure fine et simple */
+}
+
+.img-simple {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.ABC-cadre p {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: var(--texte-secondaire);
+    font-style: italic;
+}
+
+/* --- RESPONSIVE POUR LA GALERIE --- */
+
+/* Format Tablette : 2 images par ligne */
+@media (max-width: 1024px) {
+    .ABC-grille {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Format Téléphone : 1 image par ligne */
+@media (max-width: 600px) {
+    .ABC-grille {
+        grid-template-columns: 1fr;
+    }
+    
+    .img-simple {
+        height: 280px;
+    }
+}
+/* Style pour le formulaire de réservation */
+.ABC-container-form {
+    padding: 60px 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.ABC-card-form {
+    background-color: white;
+    padding: 40px;
+    width: 100%;
+    max-width: 600px;
+    border-top: 5px solid var(--couleur-principale); /* Orange */
+}
+
+.ABC-card-form h2 {
+    color: var(--couleur-secondaire); /* Marron */
+    margin-bottom: 10px;
+}
+
+.ABC-card-form p {
+    color: var(--texte-secondaire);
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+.ABC-groupe {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.ABC-groupe label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: var(--texte-principal);
+}
+
+.ABC-groupe input, 
+.ABC-groupe select, 
+.ABC-groupe textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #D1D5DB;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.ABC-ligne {
+    display: flex;
+    gap: 20px;
+}
+
+.ABC-ligne .ABC-groupe {
+    flex: 1;
+}
+
+.ABC-card-form .H {
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+/* Responsive Réservation */
+@media (max-width: 600px) {
+    .ABC-ligne {
+        flex-direction: column;
+        gap: 0;
+    }
+    .ABC-card-form {
+        padding: 20px;
     }
 }

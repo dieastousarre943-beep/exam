@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teranga Food - Réserver une table</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="A">
+
+    <header class="B">
+        <div class="C">
+            <h1>TERANGA FOOD</h1>
+            <p>Réservez votre moment de plaisir</p>
+        </div>
+    </header>
+
+    <nav class="D">
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="menu.html">Notre Menu</a></li>
+            <li><a href="about.html">À Propos</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="reservation.html">Réservation</a></li>
+        </ul>
+    </nav>
+
+    <main class="ABC-container-form">
+        <div class="ABC-card-form">
+            <h2>Formulaire de Réservation</h2>
+            <p>Remplissez les informations ci-dessous pour reserver votre table.</p>
+
+            <form action="#">
+                <div class="ABC-groupe">
+                    <label for="nom">Nom complet</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom ici" required>
+                </div>
+
+                <div class="ABC-groupe">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                </div>
+
+                <div class="ABC-ligne">
+                    <div class="ABC-groupe">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+                    <div class="ABC-groupe">
+                        <label for="heure">Heure</label>
+                        <input type="time" id="heure" name="heure" required>
+                    </div>
+                </div>
+
+                <div class="ABC-groupe">
+                    <label for="personnes">Nombre de personnes</label>
+                    <select id="personnes" name="personnes">
+                        <option value="1">1 Personne</option>
+                        <option value="2" selected>2 Personnes</option>
+                        <option value="4">4 Personnes</option>
+                        <option value="6">6 Personnes et +</option>
+                    </select>
+                </div>
+
+                <div class="ABC-groupe">
+                    <label for="message">Demande spéciale </label>
+                    <textarea id="message" name="message" rows="4" placeholder="Ex: Anniversaire, allergie..."></textarea>
+                </div>
+
+                <button type="submit" class="H">Confirmer la réservation</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p class="phone">Contact : +221 78 304 80 59</p>
+        <p>&copy; 2026 TERANGA FOOD. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
