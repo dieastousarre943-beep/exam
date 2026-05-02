@@ -128,3 +128,70 @@ body {
 @media (max-width: 600px) {
     .grille-menu { grid-template-columns: 1fr; }
 }
+/* Style pour la page À Propos */
+.ABC-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.ABC-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 80px;
+}
+
+.ABC-texte {
+    flex: 1;
+}
+
+.ABC-texte h2 {
+    color: var(--couleur-secondaire); /* Marron #7C2D12 */
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.ABC-image {
+    flex: 1;
+}
+
+.img-simple {
+    width: 100%;
+    border-radius: 5px; /* Pas d'ombre ici */
+    border: 2px solid var(--couleur-secondaire);
+}
+
+.ABC-valeurs {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-top: 4px solid var(--couleur-principale); /* Orange #D97706 */
+}
+
+.ABC-grille-simple {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.ABC-item {
+    flex: 1;
+}
+
+.ABC-item h3 {
+    color: var(--couleur-principale);
+    margin-bottom: 10px;
+}
+
+/* Responsive À Propos */
+@media (max-width: 768px) {
+    .ABC-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .ABC-grille-simple {
+        flex-direction: column;
+    }
+}
